@@ -165,7 +165,7 @@ public class CameraPreview: UIView {
                 self.selectedCamera = selectedCamera
                 self.backgroundColor = UIColor.gray
                 
-                DispatchQueue.global().async {
+                DispatchQueue.global(qos: .background).async {
                     Thread.sleep(forTimeInterval: 0.2)
                     session.startRunning()
                     DispatchQueue.main.async {
