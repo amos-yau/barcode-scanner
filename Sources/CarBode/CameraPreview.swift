@@ -166,7 +166,6 @@ public class CameraPreview: UIView {
                 self.backgroundColor = UIColor.gray
                 
                 DispatchQueue.global(qos: .background).async {
-                    Thread.sleep(forTimeInterval: 0.2)
                     session.startRunning()
                     DispatchQueue.main.async {
                         let previewLayer = AVCaptureVideoPreviewLayer(session: session)
